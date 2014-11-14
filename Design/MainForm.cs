@@ -18,16 +18,11 @@ namespace Design
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            BooksForm frm = new BooksForm();
-            frm.MdiParent = this;
-            frm.Show();
+            var form = new BooksForm();
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }
