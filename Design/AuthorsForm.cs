@@ -17,5 +17,10 @@ namespace Design
         {
             InitializeComponent();
         }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
