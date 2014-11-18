@@ -29,48 +29,61 @@
         private void InitializeComponent()
         {
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(290, 29);
+            this.metroButton1.Location = new System.Drawing.Point(409, 30);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.TabIndex = 3;
+            this.metroButton1.Text = "წიგნები";
             this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
-            // maskedTextBox1
+            // metroButton2
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(391, 29);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.metroButton2.Location = new System.Drawing.Point(491, 30);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 5;
+            this.metroButton2.Text = "ავტორები";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(572, 30);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(75, 23);
+            this.metroButton3.TabIndex = 5;
+            this.metroButton3.Text = "ჟანრები";
+            this.metroButton3.UseSelectable = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 444);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Text = "ბიბლიოთეკა";
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private MetroFramework.Controls.MetroButton metroButton1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton3;
+
 
     }
 }

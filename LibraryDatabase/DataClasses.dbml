@@ -27,4 +27,18 @@
       <Association Name="Genre_Book" Member="Books" ThisKey="GenreID" OtherKey="GenreID" Type="Book" />
     </Type>
   </Table>
+  <Function Name="dbo.AddAuthor" Method="AddAuthor">
+    <Parameter Name="insertUpdateDeleteIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="authorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="authorFirstName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="authorLastName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="authorBirthDate" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddBook" Method="AddBook">
+    <Parameter Name="authorId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="genreId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="bookName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

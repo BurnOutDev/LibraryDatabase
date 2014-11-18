@@ -94,6 +94,20 @@ namespace LibraryDatabase
 				return this.GetTable<Genre>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddAuthor")]
+		public int AddAuthor([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> insertUpdateDeleteIndex, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> authorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] string authorFirstName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] string authorLastName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> authorBirthDate)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), insertUpdateDeleteIndex, authorId, authorFirstName, authorLastName, authorBirthDate);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddBook")]
+		public int AddBook([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> authorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> genreId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] string bookName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), authorId, genreId, bookName);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Authors")]

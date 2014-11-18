@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.mGrdBooks = new MetroFramework.Controls.MetroGrid();
             this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AuthorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GenreID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,18 +41,19 @@
             this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GenreName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BooksQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.mRdbBooks = new MetroFramework.Controls.MetroRadioButton();
-            this.mRdbAuthors = new MetroFramework.Controls.MetroRadioButton();
             this.mRdbGenres = new MetroFramework.Controls.MetroRadioButton();
+            this.mRdbAuthors = new MetroFramework.Controls.MetroRadioButton();
+            this.mRdbBooks = new MetroFramework.Controls.MetroRadioButton();
+            this.mSearchBox = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mGrdBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -64,7 +65,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(431, 322);
+            this.metroPanel1.Size = new System.Drawing.Size(483, 322);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -79,28 +80,28 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.metroGrid1);
+            this.splitContainer1.Panel1.Controls.Add(this.mGrdBooks);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.mRdbGenres);
             this.splitContainer1.Panel2.Controls.Add(this.mRdbAuthors);
             this.splitContainer1.Panel2.Controls.Add(this.mRdbBooks);
-            this.splitContainer1.Panel2.Controls.Add(this.metroTextBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(431, 322);
+            this.splitContainer1.Panel2.Controls.Add(this.mSearchBox);
+            this.splitContainer1.Size = new System.Drawing.Size(483, 322);
             this.splitContainer1.SplitterDistance = 290;
             this.splitContainer1.TabIndex = 2;
             // 
-            // metroGrid1
+            // mGrdBooks
             // 
-            this.metroGrid1.AllowUserToAddRows = false;
-            this.metroGrid1.AllowUserToDeleteRows = false;
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.mGrdBooks.AllowUserToAddRows = false;
+            this.mGrdBooks.AllowUserToDeleteRows = false;
+            this.mGrdBooks.AllowUserToResizeRows = false;
+            this.mGrdBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.mGrdBooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mGrdBooks.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mGrdBooks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.mGrdBooks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -108,9 +109,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mGrdBooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.mGrdBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mGrdBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookID,
             this.AuthorID,
             this.GenreID,
@@ -125,15 +126,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(0, 0);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.ReadOnly = true;
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.mGrdBooks.DefaultCellStyle = dataGridViewCellStyle2;
+            this.mGrdBooks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mGrdBooks.EnableHeadersVisualStyles = false;
+            this.mGrdBooks.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mGrdBooks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mGrdBooks.Location = new System.Drawing.Point(0, 0);
+            this.mGrdBooks.Name = "mGrdBooks";
+            this.mGrdBooks.ReadOnly = true;
+            this.mGrdBooks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -141,12 +142,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersVisible = false;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(431, 290);
-            this.metroGrid1.TabIndex = 4;
+            this.mGrdBooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.mGrdBooks.RowHeadersVisible = false;
+            this.mGrdBooks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.mGrdBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.mGrdBooks.Size = new System.Drawing.Size(483, 290);
+            this.mGrdBooks.TabIndex = 4;
             // 
             // BookID
             // 
@@ -193,35 +194,15 @@
             this.BooksQuantity.Name = "BooksQuantity";
             this.BooksQuantity.ReadOnly = true;
             // 
-            // metroTextBox1
+            // mRdbGenres
             // 
-            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.metroTextBox1.Lines = new string[] {
-        "ძებნა..."};
-            this.metroTextBox1.Location = new System.Drawing.Point(3, 2);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.Size = new System.Drawing.Size(203, 23);
-            this.metroTextBox1.TabIndex = 0;
-            this.metroTextBox1.Text = "ძებნა...";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.TextChanged += new System.EventHandler(this.metroTextBox1_TextChanged);
-            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
-            this.metroTextBox1.Enter += new System.EventHandler(this.metroTextBox1_Enter);
-            this.metroTextBox1.Leave += new System.EventHandler(this.metroTextBox1_Leave);
-            // 
-            // mRdbBooks
-            // 
-            this.mRdbBooks.AutoSize = true;
-            this.mRdbBooks.Location = new System.Drawing.Point(212, 6);
-            this.mRdbBooks.Name = "mRdbBooks";
-            this.mRdbBooks.Size = new System.Drawing.Size(59, 15);
-            this.mRdbBooks.TabIndex = 1;
-            this.mRdbBooks.Text = "წიგნი";
-            this.mRdbBooks.UseSelectable = true;
+            this.mRdbGenres.AutoSize = true;
+            this.mRdbGenres.Location = new System.Drawing.Point(353, 6);
+            this.mRdbGenres.Name = "mRdbGenres";
+            this.mRdbGenres.Size = new System.Drawing.Size(58, 15);
+            this.mRdbGenres.TabIndex = 3;
+            this.mRdbGenres.Text = "ჟანრი";
+            this.mRdbGenres.UseSelectable = true;
             // 
             // mRdbAuthors
             // 
@@ -233,42 +214,77 @@
             this.mRdbAuthors.Text = "ავტორი";
             this.mRdbAuthors.UseSelectable = true;
             // 
-            // mRdbGenres
+            // mRdbBooks
             // 
-            this.mRdbGenres.AutoSize = true;
-            this.mRdbGenres.Location = new System.Drawing.Point(353, 6);
-            this.mRdbGenres.Name = "mRdbGenres";
-            this.mRdbGenres.Size = new System.Drawing.Size(58, 15);
-            this.mRdbGenres.TabIndex = 3;
-            this.mRdbGenres.Text = "ჟანრი";
-            this.mRdbGenres.UseSelectable = true;
+            this.mRdbBooks.AutoSize = true;
+            this.mRdbBooks.Checked = true;
+            this.mRdbBooks.Location = new System.Drawing.Point(212, 6);
+            this.mRdbBooks.Name = "mRdbBooks";
+            this.mRdbBooks.Size = new System.Drawing.Size(59, 15);
+            this.mRdbBooks.TabIndex = 1;
+            this.mRdbBooks.TabStop = true;
+            this.mRdbBooks.Text = "წიგნი";
+            this.mRdbBooks.UseSelectable = true;
+            // 
+            // mSearchBox
+            // 
+            this.mSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.mSearchBox.Lines = new string[] {
+        "ძებნა..."};
+            this.mSearchBox.Location = new System.Drawing.Point(3, 2);
+            this.mSearchBox.MaxLength = 32767;
+            this.mSearchBox.Name = "mSearchBox";
+            this.mSearchBox.PasswordChar = '\0';
+            this.mSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mSearchBox.SelectedText = "";
+            this.mSearchBox.Size = new System.Drawing.Size(203, 23);
+            this.mSearchBox.TabIndex = 0;
+            this.mSearchBox.Text = "ძებნა...";
+            this.mSearchBox.UseSelectable = true;
+            this.mSearchBox.TextChanged += new System.EventHandler(this.mSearchBox_TextChanged);
+            this.mSearchBox.Enter += new System.EventHandler(this.mSearchBox_Enter);
+            this.mSearchBox.Leave += new System.EventHandler(this.mSearchBox_Leave);
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(297, 26);
+            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButton1.Location = new System.Drawing.Point(268, 31);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.Size = new System.Drawing.Size(72, 23);
             this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.Text = "დამატება";
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // button1
+            // metroButton2
             // 
-            this.button1.Location = new System.Drawing.Point(378, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButton2.Location = new System.Drawing.Point(346, 31);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(49, 23);
+            this.metroButton2.TabIndex = 2;
+            this.metroButton2.Text = "წაშლა";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButton3.Location = new System.Drawing.Point(401, 31);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(99, 23);
+            this.metroButton3.TabIndex = 3;
+            this.metroButton3.Text = "რედაქტირება";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // BooksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 402);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(523, 402);
+            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroPanel1);
             this.MaximizeBox = false;
@@ -281,7 +297,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mGrdBooks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,7 +306,7 @@
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroGrid mGrdBooks;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn AuthorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn GenreID;
@@ -298,11 +314,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AuthorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GenreName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BooksQuantity;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox mSearchBox;
         private MetroFramework.Controls.MetroRadioButton mRdbGenres;
         private MetroFramework.Controls.MetroRadioButton mRdbAuthors;
         private MetroFramework.Controls.MetroRadioButton mRdbBooks;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private System.Windows.Forms.Button button1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }
