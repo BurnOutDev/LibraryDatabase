@@ -287,7 +287,6 @@
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroPanel1);
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(469, 402);
             this.Name = "BooksForm";
             this.Text = "წიგნების კატალოგი";

@@ -39,5 +39,12 @@ namespace Design
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            var frmGenres = new GenresForm(new LibraryDbContext());
+            frmGenres.MdiParent = this;
+            frmGenres.Show();
+        }
     }
 }

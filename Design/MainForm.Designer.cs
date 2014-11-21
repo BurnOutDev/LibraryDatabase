@@ -61,6 +61,7 @@
             this.metroButton3.TabIndex = 5;
             this.metroButton3.Text = "ჟანრები";
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // MainForm
             // 
@@ -74,6 +75,7 @@
             this.Name = "MainForm";
             this.Text = "ბიბლიოთეკა";
             this.TransparencyKey = System.Drawing.Color.Empty;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

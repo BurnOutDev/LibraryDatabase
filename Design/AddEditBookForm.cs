@@ -85,15 +85,18 @@ namespace Design
         {
             if (BookId > 0)
             {
-                Book.BookName = mTbxBookName.Text;
+                //error
 
-                Book.Author = (from x in Db.Authors
-                               where x.AuthorID == (int)(mCbxAuthor.SelectedValue)
-                               select x).FirstOrDefault();
-                Book.Genre = (from x in Db.Genres
-                              where x.GenreID == (int)(mCbxAuthor.SelectedValue)
-                              select x).FirstOrDefault();
-                Db.SubmitChanges();
+                //Book.BookName = mTbxBookName.Text;
+                
+                //Book.Author = (from x in Db.Authors
+                //               where x.AuthorID == (int)(mCbxAuthor.SelectedValue)
+                //               select x).FirstOrDefault();
+                //Db.SubmitChanges();
+                //Book.Genre = (from x in Db.Genres
+                //              where x.GenreID == (int)(mCbxAuthor.SelectedValue)
+                //              select x).FirstOrDefault();
+                //Db.SubmitChanges();
             }
             else
                 Db.AddBook((int)mCbxAuthor.SelectedValue, (int)mCbxGenre.SelectedValue, mTbxBookName.Text);

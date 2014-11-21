@@ -120,6 +120,7 @@ namespace Design
                             select x).FirstOrDefault();
                     Db.Books.DeleteOnSubmit(res);
                     Db.SubmitChanges();
+                    ReFillDatagridview();
                 }
             }
         }

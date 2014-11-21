@@ -41,4 +41,12 @@
     <Parameter Name="bookName" Type="System.String" DbType="NVarChar(MAX)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.AddGenre" Method="AddGenre">
+    <Parameter Name="genreName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteGenre" Method="DeleteGenre">
+    <Parameter Name="genreId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
