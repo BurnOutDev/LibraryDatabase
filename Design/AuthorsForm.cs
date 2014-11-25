@@ -15,6 +15,7 @@ namespace Design
 {
     public partial class AuthorsForm : MetroForm
     {
+        private int rownum;
         public LibraryDbContext Db { get; set; }
 
         public AuthorsForm(LibraryDbContext db)
@@ -62,6 +63,7 @@ namespace Design
                     Db.AddAuthor(2, id, null, null, null);
                 }
             }
+            ReFillDatagridview();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -71,11 +73,30 @@ namespace Design
                 if (mGrid.SelectedRows.Count != 0)
                 {
                     var frm = new AddEditAuthorsForm(Db, (int)(mGrid.SelectedRows[0].Cells[0].Value));
-                    frm.Show();
+                    frm.ShowDialog();
                     ReFillDatagridview();
                 }
             }
             catch { }
         }
+
+        private void mGrid_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                mGrid.ClearSelection();
+                mGrid.Rows[e.RowIndex].Selected = true;
+                rownum = e.RowIndex;
+                contextMenu.Show(MousePosition);
+            }
+            
+        }
+
+        private void წაშლაToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            metroButton3.PerformClick();
+        }
+
+
     }
 }

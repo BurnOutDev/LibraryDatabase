@@ -46,5 +46,18 @@ namespace Design
             frmGenres.MdiParent = this;
             frmGenres.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+            var frm = new CustomersForm(Db);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+
     }
 }
